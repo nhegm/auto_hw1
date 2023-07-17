@@ -7,6 +7,11 @@ import static org.junit.Assert.assertEquals;
 
 public class CashbackHackServiceTest {
 
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import static org.testng.Assert.assertEquals;
+
+public class CashbackHackServiceTest {
     @Test
     public void ShouldCalculateAmountOfCashbackWhenBelow1000() {
         CashbackHackService cashbackHack = new CashbackHackService();
@@ -33,4 +38,6 @@ public class CashbackHackServiceTest {
         int expected = 1_000;
         assertEquals(actual, expected);
     }
+}
+
 }
