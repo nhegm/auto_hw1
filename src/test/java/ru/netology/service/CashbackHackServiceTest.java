@@ -30,6 +30,6 @@ public class CashbackHackServiceTest {
         int amount = 1_000;
         int actual = cashbackHack.remain(amount);
         int expected = 0;
-        assertNotEquals(actual, expected);
+        assertEquals(actual, expected);
     }
 }
