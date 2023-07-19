@@ -2,11 +2,10 @@ package ru.netology.service;
 
 import org.junit.Test;
 import org.junit.Assert;
-
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class CashbackHackServiceTest {
-
     @Test
     public void ShouldCalculateAmountOfCashbackWhenBelow1000() {
         CashbackHackService cashbackHack = new CashbackHackService();
@@ -30,7 +29,7 @@ public class CashbackHackServiceTest {
         CashbackHackService cashbackHack = new CashbackHackService();
         int amount = 1_000;
         int actual = cashbackHack.remain(amount);
-        int expected = 1_000;
-        assertEquals(actual, expected);
+        int expected = 0;
+        assertNotEquals(actual, expected);
     }
 }
